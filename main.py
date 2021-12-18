@@ -1,17 +1,17 @@
 import os
 import telebot
 
-bot = telebot.TeleBot("API KEY HERE")
+bot = telebot.TeleBot("")
 
 @Bot.message_handler(commands=["start"])
 def send_welcome(message):
     bot.reply_to(message,"Hello! I'm Nidusha Amarasinghe Official Bot.visit My Command List Go To :- https://telegra.ph/Nidusha-Official-Bot-Command-List-12-17")
 
-@bot.message_handler(commands=["supportgroup"])
+@bot.message_handler(commands=["support"])
 def send_message (message):
 bot.reply_to(message, "https://t.me/Nidusha_Bots")
 
-@bot.message_handler(commands=["updatechannel"])
+@bot.message_handler(commands=["updatecnl"])
 def send_message (message):
 bot.reply_to(message, "https://t.me/Nidushabots_Updates")
 
@@ -34,5 +34,14 @@ bot.reply_to(message, "🤟Hii I'm Online Now😘")
 @bot.message_handler(commands=["commands"])
 def send_message (message):
 bot.reply_to(message, "https://telegra.ph/Nidusha-Official-Bot-Command-List-12-17")
+
+@bot.message_handler(commands=["contact"])
+def send_message (message):
+bot.reply_to(message, "You Can Contact Nidusha Amarasinghe @NCAmarasinghe , amarasinghenidusha2009@Gmail.com")
+
+@bot.message_handler(commands=["update"])
+def send_message (message):
+bot.reply_to(message, "💕Nidusha Official Bot Updated Successfully😉")
+
 
 bot.polling()
